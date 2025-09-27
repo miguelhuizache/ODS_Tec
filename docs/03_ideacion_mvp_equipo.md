@@ -4,19 +4,20 @@ Problema Central: Los niños y adolescentes mexicanos carecen de herramientas di
 
 Criterios de Éxito (Mínimos del Prototipo):
 
-Registro de Datos Básico (Tasa de éxito ≥95%).
+    Registro de Datos Básico (Tasa de éxito ≥95%).
 
-Visualización de Progreso (Mostrar una gráfica semanal).
+    Visualización de Progreso (Mostrar una gráfica semanal).
 
-Persistencia de Información (Guardar y recuperar datos de un archivo local).
+    Persistencia de Información (Guardar y recuperar datos de un archivo local).
 
-Usabilidad Mínima (Completar tarea de registro en <30 segundos).
+    Usabilidad Mínima (Completar tarea de registro en <30 segundos).
 
 ------------------------------------------------------------------------------------------------------------------------
 
 Lluvia de Ideas Generadas
 
-App de "Héroe Nutricional": Un tracker simple gamificado donde los usuarios "alimentan" a un avatar virtual con sus propios datos de comidas.
+    App de "Héroe Nutricional": Un tracker simple gamificado donde los usuarios "alimentan" a un avatar virtual con sus propios datos de comidas.
 
-Detector de Alimentos y Recetas Inteligente: App que analiza fotos de platos o alacenas para dar retroalimentación nutricional, sugerencias de mejora y recetas con los ingredientes disponibles.
+    Detector de Alimentos y Recetas Inteligente: App que analiza fotos de platos o alacenas para dar retroalimentación nutricional, sugerencias de mejora y recetas con los ingredientes disponibles.
+
 
