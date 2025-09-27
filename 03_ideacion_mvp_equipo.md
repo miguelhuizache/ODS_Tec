@@ -17,4 +17,4 @@ Criterios de Éxito (Mínimos del Prototipo):
 
 Lluvia de Ideas Generadas
 
-App de "Héroe Nutricional" Un tracker simple gamificado donde los usuarios "alimentan" a un avatar virtual con sus propios datos de comidas.
+App de "Héroe Nutricional": Un tracker simple gamificado donde los usuarios "alimentan" a un avatar virtual con sus propios datos de comidas.
