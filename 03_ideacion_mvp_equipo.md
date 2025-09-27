@@ -12,3 +12,6 @@ Criterios de Éxito (Mínimos del Prototipo):
     Persistencia de Información (Guardar y recuperar datos de un archivo local).
 
     Usabilidad Mínima (Completar tarea de registro en <30 segundos).
+
+
+Lluvia de Ideas Generadas
