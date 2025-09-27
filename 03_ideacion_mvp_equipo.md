@@ -13,6 +13,6 @@ Criterios de Éxito (Mínimos del Prototipo):
 
     Usabilidad Mínima (Completar tarea de registro en <30 segundos).
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Lluvia de Ideas Generadas
