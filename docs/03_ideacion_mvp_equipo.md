@@ -41,7 +41,7 @@ Esta idea fue seleccionada por ser la que mejor se alinea con la **motivación d
 
 ---
 
-## 4. Clasificación de Funcionalidades (MoSCoW)
+## Clasificación de Funcionalidades (MoSCoW)
 
 | Categoría | Funcionalidad | Módulo Asociado (Arquitectura) |
 | :--- | :--- | :--- |
@@ -55,7 +55,7 @@ Esta idea fue seleccionada por ser la que mejor se alinea con la **motivación d
 
 ---
 
-## 5. Wireflow Básico y Arquitectura Mínima (MVP)
+## Wireflow Básico y Arquitectura Mínima (MVP)
 
 ### Wireflow (Flujo de Pantallas Básico)
 1.  **Inicio/Creación de Mascota:** Elegir nombre/tipo de mascota y cargar datos previos.
