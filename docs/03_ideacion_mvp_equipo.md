@@ -24,13 +24,17 @@
 ---
 
 ### Idea Base Seleccionada
-**App de Nutrición Juvenil con Mascota Virtual: "NutriPet"**
+**Asistente Nutricional Personalizado con Gamificación: "NutriLife"**
 
 ### Descripción General
-**NutriPet** es una aplicación **gamificada** que combina el cuidado de la salud con una **mascota virtual** que evoluciona en función de los **hábitos alimenticios saludables** del usuario. Su objetivo principal es promover una alimentación balanceada entre **adolescentes y jóvenes adultos** a través de la educación nutricional, la motivación y la interacción lúdica.
+**NutriLife** es una aplicación dirigida a **adultos** que buscan mejorar sus hábitos o manejar condiciones metabólicas. Utiliza un **semáforo visual** para calificar comidas y un **sistema de puntos gamificado** para fomentar la toma de decisiones conscientes. Se enfocará en la **alimentación consciente** y el **seguimiento de parámetros clave** (como glucosa, opcional).
 
 ### Justificación
-Esta idea fue seleccionada por ser la que mejor se alinea con la **motivación de la población juvenil** (gamificación y cuidado de una entidad digital). Ataca directamente la **falta de conciencia y motivación** al traducir el acto de comer sano en un beneficio tangible (la salud de la mascota), lo cual es crucial para la **adhesión a largo plazo**. Además, su enfoque modular permite cumplir con los **Criterios de Éxito** de registro de datos y visualización de progreso en la fase de Prototipo.
+Esta idea fue seleccionada por ser la que mejor se adapta al nuevo enfoque de **adultos conscientes de su salud** y porque:
+
+1.  **Enfoque Práctico y Decisorio:** Se centra en dar **retroalimentación inmediata** a través de un **semáforo** (Verde/Amarillo/Rojo) al adulto en el momento de registrar la comida, facilitando la toma de decisiones conscientes.
+2.  **Manejo Específico (ODS 3):** Incorpora un **diario de seguimiento** con campos opcionales para la **glucosa**, permitiendo que el proyecto sirva como herramienta de apoyo preventivo o inicial para condiciones como la diabetes.
+3.  **Cumple Criterios Técnicos:** Su enfoque en el **registro, feedback visual** y **persistencia de datos** es totalmente compatible con los requisitos mínimos del prototipo definidos en la Sesión 2.
 
 ---
 
@@ -38,28 +42,29 @@ Esta idea fue seleccionada por ser la que mejor se alinea con la **motivación d
 
 | Categoría | Funcionalidad | Módulo Asociado (Arquitectura) |
 | :--- | :--- | :--- |
-| **MUST HAVE** | **Registro Básico de Comidas:** Entrada manual de una comida al día y calificación simple de "Sano/No Sano". | `app/`, `core/` |
-| **MUST HAVE** | **Estado de la Mascota (Feedback Visual):** El estado de la mascota (ícono o mensaje) debe cambiar visiblemente si el usuario registra un día sano o no sano. | `app/`, `viz/` |
-| **MUST HAVE** | **Persistencia:** Cargar y guardar el estado de la mascota y el historial de registros en un archivo local (JSON/TXT). | `data/` |
-| **SHOULD HAVE** | **Métricas Básicas:** Mostrar un resumen de los días saludables completados durante la última semana. | `viz/` |
-| **COULD HAVE** | **Evolución Simple:** Desbloqueo de un accesorio básico para la mascota después de 7 días saludables consecutivos. | `core/` |
-| **WON'T HAVE** | **Análisis de Componentes con IA:** Escaneo de alimentos o detección avanzada de imágenes. | N/A |
-| **WON'T HAVE** | **Conexión a APIs Médicas o Nutricionales Externas** | N/A |
+| **MUST HAVE** | **Registro Diario Básico:** Entrada manual de comidas. | `app/`, `core/` |
+| **MUST HAVE** | **Semáforo Visual de Conciencia:** El usuario clasifica su comida registrada como **Verde/Amarillo/Rojo** y el sistema muestra un resumen de estos colores semanalmente. | `app/`, `core/`, `viz/` |
+| **MUST HAVE** | **Diario de Registros:** Interfaz para registrar y ver el historial de las últimas 7 entradas. | `app/`, `data/` |
+| **MUST HAVE** | **Persistencia:** Cargar y guardar el perfil del usuario, el contador de monedas y los registros en un archivo local (JSON/TXT). | `data/` |
+| **SHOULD HAVE** | **Sistema de Monedas/Puntos Básico:** Otorgar puntos por cada registro "Verde" para motivar la constancia. | `core/` |
+| **COULD HAVE** | **Módulo Extra (Glucosa):** Campo de registro opcional para niveles de glucosa en sangre (si el perfil lo indica). | `core/` |
+| **WON'T HAVE** | **Análisis de Fotos Complejo (IA):** Detección de alimentos en fotos de platos o alacena. | N/A |
+| **WON'T HAVE** | **Conexión a APIs Médicas o Nutricionales Externas.** | N/A |
 
 ---
 
 ## Wireflow Básico y Arquitectura Mínima (MVP)
 
 ### Wireflow (Flujo de Pantallas Básico)
-1.  **Inicio/Creación de Mascota:** Elegir nombre/tipo de mascota y cargar datos previos.
-2.  **Dashboard (Principal):** Vista de la Mascota (estado actual) y botones de acción ("Registrar Comida", "Ver Progreso").
-3.  **Registro de Comida:** Ingreso de comida y calificación (Sano/No Sano).
-4.  **Progreso Semanal:** Gráfica o resumen de días saludables completados.
+1.  **Inicio/Perfil:** Creación de perfil (edad, meta, ¿usuario con diabetes?).
+2.  **Dashboard (Principal):** Muestra el balance semanal (colores del semáforo), contador de monedas y botones de acción.
+3.  **Registro Diario:** Pantalla con campos para: 1. Descripción de la comida. 2. Clasificación **Verde/Amarillo/Rojo**. 3. Campo de **Glucosa** (opcional).
+4.  **Historial/Reporte:** Vista de los registros y resumen semanal.
 
 ### Arquitectura Mínima (Módulos)
 | Módulo/Carpeta | Rol Principal | Descripción de Funcionalidad |
 | :--- | :--- | :--- |
 | **`app/`** | **Interfaz de Usuario (UI)** | Contiene el código principal de PySimpleGUI. Gestiona ventanas, botones y la interacción directa del usuario. |
-| **`core/`** | **Lógica del Juego/Negocio** | El cerebro de **NutriPet**. Contiene la lógica que define el estado de la mascota, la validación de los registros y el cálculo de la recompensa. |
-| **`data/`** | **Manejo de Archivos** | Responsable de la persistencia. Funciones para `guardar_estado_mascota()` y `cargar_historial()` desde archivos locales. |
-| **`viz/`** | **Visualización/Feedback** | Contiene el código para mostrar la mascota (texto o imágenes dinámicas) y las métricas de progreso semanal. |
+| **`core/`** | **Lógica de Negocio y Reglas** | El cerebro de **NutriLife**. Contiene la lógica para asignar puntos, calcular el balance del semáforo y validar la entrada de datos. |
+| **`data/`** | **Manejo de Archivos** | Responsable de la persistencia. Funciones para `guardar_perfil()` y `cargar_registros()` desde archivos locales (JSON/TXT). |
+| **`viz/`** | **Visualización de Datos** | Contiene el código para mostrar el resumen del semáforo semanal y el contador de monedas. |
