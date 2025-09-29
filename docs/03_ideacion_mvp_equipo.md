@@ -29,8 +29,11 @@ Lluvia de Ideas Generadas
 ------------------------------------------------------------------------------------------------------------------------
 
 Idea Elegida y Justificación
+
 Idea Base Seleccionada
-    App de Nutrición Juvenil con Mascota Virtual: "NutriPet"
+    
+App de Nutrición Juvenil con Mascota Virtual: "NutriPet"
+
 
 Descripción General
     
