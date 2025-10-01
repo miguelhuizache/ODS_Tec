@@ -18,7 +18,7 @@
 ## Captura de pantalla
 Agrega aquí la captura real de la ventana al ejecutarla:
 
-![Ventana de Bienvenida](./img/ventana_home_adriana.png)
+![Ventana de Bienvenida](BocetoP.png)
 
 ---
 
