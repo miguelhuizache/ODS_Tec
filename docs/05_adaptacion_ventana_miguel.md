@@ -55,10 +55,4 @@ Es la **Ventana 5 (Canvas)**. Básicamente, un lienzo donde dibujamos cosas y ju
 - “Temas” de color (claro/oscuro).
 - Snap al grid (para colocar objetos exactos).
 
----
 
-## Dónde va en el proyecto
-Archivo: `src/app/win_canvas.py`  
-Import en la principal:
-```python
-from .win_canvas import open_win_canvas
