@@ -15,6 +15,8 @@ Imagen de la propuesta:
 https://github.com/user-attachments/assets/df79690f-6516-4a18-8ffa-61e4a6b3b962
 [win_listdesas.py](https://github.com/user-attachments/files/22611140/win_listdesas.py)
 
+Imagen de la app editada:
+![WhatsApp Image 2025-09-30 at 7 21 42 PM](https://github.com/user-attachments/assets/3b0a7e38-653b-48ca-a9f0-cafd432b2e81)
 
 ¿Por qué estos cambios ayudan al proyecto?
 
