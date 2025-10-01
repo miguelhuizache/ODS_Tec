@@ -15,6 +15,7 @@ Imagen de la propuesta:
 https://github.com/user-attachments/assets/df79690f-6516-4a18-8ffa-61e4a6b3b962
 [win_listdesas.py](https://github.com/user-attachments/files/22611140/win_listdesas.py)
 
+
 ¿Por qué estos cambios ayudan al proyecto?
 
 Porque nos acercan a un caso real, no solo “guardamos datos”, sino que entendemos al usuario (estado de salud, hábitos y actividad). 
