@@ -220,3 +220,43 @@ if __name__ == "__main__":
     root.title("Prueba win_canvas")
     ttk.Button(root, text="Abrir ventana Canvas", command=lambda: open_win_canvas(root)).pack(pady=20)
     root.mainloop()
+```
+
+## 🛠️ CAMBIOS REALIZADOS:
+
+1. **Cambio de ubicación:**  
+   Se actualizó la latitud y longitud para consultar datos de **Ciudad de México** en vez de León.
+
+2. **Nombres y etiquetas:**  
+   Se reemplazó "León" por "Ciudad de México" en títulos, etiquetas y comentarios.
+
+3. **Parámetros adicionales:**  
+   Se integraron los datos de **humedad relativa** y **velocidad del viento**, además de la temperatura.
+
+4. **Gráficas personalizadas:**  
+   - Se agregaron **gráficas de línea y de barras** para cada parámetro (temperatura, humedad, viento).  
+   - Se ajustaron los colores:  
+     - 🔴 Rojo para temperatura  
+     - 🔵 Azul para humedad  
+     - 🟢 Verde para viento  
+   - Se personalizaron los **marcadores**, el **grosor de línea** y la **transparencia**.  
+   - Se añadió una **rejilla** a todas las gráficas para facilitar la lectura.
+
+5. **Visualización y organización:**  
+   - Las gráficas se organizaron en una **cuadrícula (2 columnas x 3 filas)**.  
+   - Se añadió un **scrollbar vertical** para facilitar la visualización en ventanas pequeñas.
+
+6. **Tablas de datos:**  
+   - Se agregaron tablas para mostrar los datos de **temperatura**, **humedad** y **viento**.  
+   - Se mejoraron los **nombres de las tablas** para que sean más claros y específicos.
+
+7. **Formato de fecha y hora:**  
+   - Se transformó la fecha y hora de **formato ISO** a uno más legible en las tablas.  
+   - En las gráficas, el **eje X muestra solo la hora** y el **título incluye la fecha**.
+
+8. **Filtrado de datos:**  
+   - Se limitó la visualización a los **primeros 24 datos** en tablas y gráficas para evitar saturación visual.
+
+9. **Mejoras visuales:**  
+   - Se ajustó la cantidad de **etiquetas en el eje X** para evitar empalmes.  
+   - Se permitió mostrar los **24 datos completos** en el eje X, solo con la hora.
