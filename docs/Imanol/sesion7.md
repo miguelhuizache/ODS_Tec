@@ -236,12 +236,12 @@ if __name__ == "__main__":
    - Se ajustaron los colores:  
      - Rojo para temperatura  
      - Azul para humedad  
-     - Verde para viento  
+     - Verde para velocidad del viento  
    - Se personalizaron los **marcadores**, el **grosor de línea** y la **transparencia**.  
    - Se añadió una **rejilla** a todas las gráficas para facilitar la lectura.
 
 5. **Visualización y organización:**  
-   - Las gráficas se organizaron en una **cuadrícula (2 columnas x 3 filas)**.  
+   - Las gráficas se organizaron en una **cuadrícula**.  
    - Se añadió un **scrollbar vertical** para facilitar la visualización en ventanas pequeñas.
 
 6. **Tablas de datos:**  
@@ -249,12 +249,9 @@ if __name__ == "__main__":
    - Se mejoraron los **nombres de las tablas** para que sean más claros y específicos.
 
 7. **Formato de fecha y hora:**  
-   - Se transformó la fecha y hora de **formato ISO** a uno más legible en las tablas.  
+   - Se transformó la fecha y hora a uno más legible.  
    - En las gráficas, el **eje X muestra solo la hora** y el **título incluye la fecha**.
 
 8. **Filtrado de datos:**  
    - Se limitó la visualización a los **primeros 24 datos** en tablas y gráficas para evitar saturación visual.
 
-9. **Mejoras visuales:**  
-   - Se ajustó la cantidad de **etiquetas en el eje X** para evitar empalmes.  
-   - Se permitió mostrar los **24 datos completos** en el eje X, solo con la hora.
