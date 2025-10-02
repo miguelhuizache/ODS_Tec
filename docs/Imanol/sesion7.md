@@ -1,11 +1,9 @@
 # Gráficas modificadas sesión 7
 
-## 📊 Visualización
-
-[Gráficas de sesión 7]
+## [Gráficas de sesión 7]
 https://github.com/user-attachments/assets/b33070f0-f08a-45a3-ac40-59a112f733c5"
 
-## 🐍 Código en Python
+## Código modificado
 
 ```python
 import tkinter as tk
@@ -222,7 +220,7 @@ if __name__ == "__main__":
     root.mainloop()
 ```
 
-## 🛠️ CAMBIOS REALIZADOS:
+## CAMBIOS REALIZADOS:
 
 1. **Cambio de ubicación:**  
    Se actualizó la latitud y longitud para consultar datos de **Ciudad de México** en vez de León.
@@ -236,9 +234,9 @@ if __name__ == "__main__":
 4. **Gráficas personalizadas:**  
    - Se agregaron **gráficas de línea y de barras** para cada parámetro (temperatura, humedad, viento).  
    - Se ajustaron los colores:  
-     - 🔴 Rojo para temperatura  
-     - 🔵 Azul para humedad  
-     - 🟢 Verde para viento  
+     - Rojo para temperatura  
+     - Azul para humedad  
+     - Verde para viento  
    - Se personalizaron los **marcadores**, el **grosor de línea** y la **transparencia**.  
    - Se añadió una **rejilla** a todas las gráficas para facilitar la lectura.
 
