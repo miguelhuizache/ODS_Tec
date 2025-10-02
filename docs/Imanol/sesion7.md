@@ -2,7 +2,7 @@
 
 ## 📊 Visualización
 
-![Gráficas de sesión 7](<img width="2450" height="1653" alt="image" src="https://github.com/user-attachments/assets/b33070f0-f08a-45a3-ac40-59a112f733c5" />)
+![Gráficas de sesión 7]https://github.com/user-attachments/assets/b33070f0-f08a-45a3-ac40-59a112f733c5" />
 
 ## 🐍 Código en Python
 
