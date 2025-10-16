@@ -166,6 +166,6 @@ if __name__ == "__main__":
 ---------
 
 **Cambios que hice:**
-Ciudad: pasé de León a Cortazar, Gto. Metí las coords 20.485, -100.963 y dejé el timezone fijo en America/Mexico_City para que no ande brincando nada. Colores/estilo: cambié la paleta: fondos más claritos, área en verde y barras azules con borde. Misma estructura, vibe distinta. Otra vista: la primera gráfica ahora es de área (línea + relleno). Mismo dato, se siente más limpia y moderna. Horas: acorté las etiquetas a dd/HHh y puse menos ticks (aprox cada 3 h) pa’ que no se vea atascado. Sin duplicados: si vuelves a dar al botón, limpio y repinto; ya no se acumulan las gráficas. Limpieza visual: quité bordes de ejes y unifiqué fondos/títulos/labels para que todo se lea más fácil.
+Ciudad: pasé de León a Cortazar, Gto. Metí las coordenas de mi ciudad 20.485, -100.963 y dejé el timezone fijo en America/Mexico_City para que no ande brincando nada, los colores/estilo: cambié la paleta: fondos más claritos, área en verde y barras azules con borde, misma estructura, vibra distinta. Otra vista: la primera gráfica ahora es de área (línea + relleno). Mismo dato, se siente más limpia y moderna. Horas: acorté las etiquetas a dd/HHh y puse menos ticks (aprox cada 3 h) para que no se vea atascado. Sin duplicados: si vuelves a dar al botón, limpio y repinto; ya no se acumulan las gráficas. Limpieza visual: quité bordes de ejes y unifiqué fondos/títulos/labels para que todo se lea más fácil.
 
 
