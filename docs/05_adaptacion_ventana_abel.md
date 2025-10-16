@@ -21,9 +21,9 @@ Cómo se usa
 - Misma guía visual: estilos consistentes (badges/headers/colores) que combinan con el resto de la app.
 - Listo para crecer: el CSV se puede poblar desde formularios del proyecto sin tocar la UI.
 
-Capturas
 
 
+```python
 import tkinter as tk
 from tkinter import ttk, messagebox
 import csv
@@ -91,7 +91,7 @@ def open_win_table(parent: tk.Tk):
 
     mostrar_registro()
 
-
+```
 
 
 
