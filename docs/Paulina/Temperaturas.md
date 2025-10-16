@@ -1,4 +1,4 @@
-(BocetoP.png)
+![Ventana de Bienvenida](BocetoP.png)
 
 ---
 
