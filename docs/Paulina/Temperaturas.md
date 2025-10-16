@@ -1,4 +1,4 @@
-![Ventana de Bienvenida](BocetoP.png)
+![Temperatura horaria en Monterrey N.L.](TempMTY_NL.png)
 
 ---
 
