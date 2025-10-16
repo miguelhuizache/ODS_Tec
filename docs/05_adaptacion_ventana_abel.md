@@ -21,6 +21,7 @@ Cómo se usa
 - Listo para crecer: el CSV se puede poblar desde formularios del proyecto sin tocar la UI.
 
 Capturas
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 import csv
@@ -165,5 +166,5 @@ def abrir_info_nutritec(win: tk.Tk | tk.Toplevel):
 
     mostrar_registro()
 
-Mini reflexión
+Mini reflexión: 
 Algo legible y la lista facil de entender para que el usuario encuentre mas didactica su estadia en la aplicación que realmente es algo facil de hacer, siento que el codigo inicial quedo de una mejor manera .
