@@ -4,12 +4,12 @@
 **Ventana asignada:** **Ventana 5 — `win_canvas.py`**  
 **Proyecto:** **NutriTec Foráneo** (hábitos de comida/agua/sueño con semáforo y avatar)
 
----
+----
 
 ## ¿Qué cambié?
 Convertí el canvas de “adorno” en un tablero semanal que de verdad dice algo: muestra el sueño promedio de la semana, el conteo de comidas por semáforo (Verdes, Amarillos, Rojos), el agua total (7 días) en mililitros y un emoji de estado (🙂/😐/😴) según el balance y el sueño. Además, tipo app móvil (cards, badges, esquinas redondeadas) usando solo tkinter/ttk, con un un botón “Generar semana demo” que crea datos realistas y refresca la vista al instante, y dejé todo alimentado desde data/logs.json (sin hardcode): si el equipo registra datos, el Canvas los refleja sin tocar nada.
 
----
+----
 
 ## Cómo se usa 
 1. Ejecuta la app y entra a **“5) Canvas (Dibujo)”**.  
