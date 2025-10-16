@@ -1,4 +1,5 @@
-
+Abel Muñoz Arredondo
+A01352836
 
 ```python
 # open_meteo_queretaro_v1.py
@@ -189,4 +190,6 @@ if __name__ == "__main__":
 ```
 
 <img width="1012" height="726" alt="image" src="https://github.com/user-attachments/assets/e4a3d363-e419-43d6-8ffd-ece3bea6a211" />
+
+
 
