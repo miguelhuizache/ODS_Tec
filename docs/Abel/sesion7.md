@@ -191,5 +191,5 @@ if __name__ == "__main__":
 
 <img width="1012" height="726" alt="image" src="https://github.com/user-attachments/assets/e4a3d363-e419-43d6-8ffd-ece3bea6a211" />
 
-
+Primero que nada  pasé de León a Queretaro. Metí las coordenas de Queretaro 20.5888, 100 y la hora quedo igual que es la  America/Mexico_City , los colores fueron en color azul de las graficas ya que es un color que es facil de identifcar to; ya no se acumulan las gráficas. Limpieza visual: quité bordes de ejes y unifiqué fondos/títulos/labels para que todo se lea más fácil.
 
