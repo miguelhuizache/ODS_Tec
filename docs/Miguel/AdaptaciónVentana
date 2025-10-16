@@ -4,12 +4,12 @@
 **Ventana asignada:** **Ventana 5 — `win_canvas.py`**  
 **Proyecto:** **NutriTec Foráneo** (hábitos de comida/agua/sueño con semáforo y avatar)
 
-----
+-----
 
 ## ¿Qué cambié?
 Convertí el canvas de “adorno” en un tablero semanal que de verdad dice algo: muestra el sueño promedio de la semana, el conteo de comidas por semáforo (Verdes, Amarillos, Rojos), el agua total (7 días) en mililitros y un emoji de estado (🙂/😐/😴) según el balance y el sueño. Además, tipo app móvil (cards, badges, esquinas redondeadas) usando solo tkinter/ttk, con un un botón “Generar semana demo” que crea datos realistas y refresca la vista al instante, y dejé todo alimentado desde data/logs.json (sin hardcode): si el equipo registra datos, el Canvas los refleja sin tocar nada.
 
-----
+-----
 
 ## Cómo se usa 
 1. Ejecuta la app y entra a **“5) Canvas (Dibujo)”**.  
@@ -20,6 +20,7 @@ Convertí el canvas de “adorno” en un tablero semanal que de verdad dice alg
    - **Agua (7d)** = mililitros acumulados en los últimos 7 días.
    - **Estado** = 🙂/😐/😴 según tu balance.
 
+-----
 
 ## ¿Por qué esto ayuda al proyecto?
 - **Te ubica rapidísimo:** en 5 segundos sabes si tu semana va “verde” o “se está yendo al rojo”.
@@ -27,18 +28,18 @@ Convertí el canvas de “adorno” en un tablero semanal que de verdad dice alg
 - **Motiva sin regañar:** el emoji del estado es un empujoncito visual para mejorar mañana.
 - **Listo para crecer:** luego podremos conectar foto del plato/alacena y recomendaciones; este tablero ya es el lugar donde se ve el progreso.
 
----
+-----
 
 ## Capturas
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/60f4fd31-8179-4b88-af29-66f9f5c82b88" />
 
-
 - **Propuesta / mock:**  
   `https://tu-enlace-o-coloca-la-imagen-aqui.png`
 
----
-```python
+-----
+
 ## Dónde están mis cambios
+```python
 # src/app/win_canvas.py
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -156,7 +157,7 @@ def seed_demo_week():
 
     save_logs(data)
 
-
+# ---------- UI helpers ----------
 def round_rect(canvas, x1, y1, x2, y2, r=16, **kw):
     r = min(r, (x2-x1)//2, (y2-y1)//2)
     points = [
@@ -166,7 +167,7 @@ def round_rect(canvas, x1, y1, x2, y2, r=16, **kw):
     ]
     return canvas.create_polygon(points, smooth=True, **kw)
 
-
+# ---------- Window ----------
 def open_win_canvas(parent: tk.Tk):
     # Si no hay logs, sembramos una semana de demo automáticamente
     if not LOGS.exists() or not load_logs():
@@ -263,10 +264,3 @@ def open_win_canvas(parent: tk.Tk):
         seed_demo_week()
         messagebox.showinfo("OK", "Semana demo generada 👌")
         redraw()
-```
-
------
-
-## Mini reflexión
-pienso que menos es más—con tres señales (comida, agua y sueño) ya se entiende la semana. Además, lo visual sí jala: ver las barras y el emoji te dan ganas de sumar más cosas en verdes y ver que estás yendo bien.
-
