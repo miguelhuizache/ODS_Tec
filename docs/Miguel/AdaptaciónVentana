@@ -39,6 +39,7 @@ Convertí el canvas de “adorno” en un tablero semanal que de verdad dice alg
 ---
 
 ## Dónde están mis cambios
+``` python
 # src/app/win_canvas.py
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -263,7 +264,7 @@ def open_win_canvas(parent: tk.Tk):
         seed_demo_week()
         messagebox.showinfo("OK", "Semana demo generada 👌")
         redraw()
-
+```
 
 ---
 
