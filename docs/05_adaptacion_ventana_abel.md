@@ -1,4 +1,5 @@
 05_adaptacion_ventana_abel_muñoz.md
+
 Integrante: Abel Muñoz Arredondo
 Ventana asignada: Ventana 5 — Lista
 Proyecto: NutriTec (ficha/MVP en lista navegable con twinker)
@@ -21,6 +22,7 @@ Cómo se usa
 - Listo para crecer: el CSV se puede poblar desde formularios del proyecto sin tocar la UI.
 
 Capturas
+
 
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -88,7 +90,6 @@ def open_win_table(parent: tk.Tk):
     ttk.Button(btn_frame, text="Cerrar", command=win.destroy, style="Nav.TButton").grid(row=0, column=2, padx=8)
 
     mostrar_registro()
-
 
 
 
