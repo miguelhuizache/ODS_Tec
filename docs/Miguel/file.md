@@ -4,7 +4,7 @@
 ----------
 
 **Código:**
-
+```python
 import tkinter as tk
 from tkinter import ttk, messagebox
 from datetime import datetime
@@ -159,7 +159,7 @@ if __name__ == "__main__":
     root.configure(bg=BG_APP)
     ttk.Button(root, text="Abrir ventana Canvas", command=lambda: open_win_canvas(root)).pack(pady=20)
     root.mainloop()
-    
+ ```   
 -----------
 **Imagen del resultado:**
 ![Imagen de WhatsApp 2025-10-16 a las 11 57 18_447fd7c5](https://github.com/user-attachments/assets/97159db2-96b8-4dd7-91fc-077bd11ea229)
