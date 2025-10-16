@@ -1,36 +1,67 @@
-# 05 – Adaptación de la ventana al proyecto (NutriTec)
+import tkinter as tk
+from tkinter import ttk, messagebox
+import csv
+from pathlib import Path
 
-## 1) Contexto
-Se adaptó la **ventana de tabla** (`app/win_table.py`) para el proyecto **NutriTec** (ODS 3: Salud y bienestar), enfocada en el **registro diario de hábitos** usando un **semáforo** (Verde/Amarillo/Rojo), minutos de actividad, puntos y glucosa opcional.
+def open_win_table(parent: tk.Tk):
+    win = tk.Toplevel(parent)
+    win.title("Registros guardados")
+    win.geometry("600x650")
+    win.configure(bg="white")
 
-## 2) Objetivo de la ventana
-- Capturar, consultar y editar registros diarios.
-- Mostrar tabla con ordenamiento y filtro por columna.
-- Exportar los datos a CSV.
+    style = ttk.Style()
+    style.theme_use("clam")
+    style.configure("TFrame", background="white")
+    style.configure("TLabel", background="white", foreground="#0a3d62", font=("Segoe UI", 11))
+    style.configure("Header.TLabel", font=("Segoe UI", 14, "bold"), foreground="#1e56a0", background="white")
+    style.configure("Nav.TButton", font=("Segoe UI", 11, "bold"), padding=6, background="#2980b9", foreground="white")
+    style.map("Nav.TButton", background=[("active", "#1e73be")])
 
-## 3) Esquema de datos (columnas)
-| Campo        | Tipo        | Descripción                                         |
-|--------------|-------------|-----------------------------------------------------|
-| ID           | entero      | Identificador autoincremental.                      |
-| Fecha        | texto       | Formato `YYYY-MM-DD`.                               |
-| Comida       | texto       | Descripción breve de la comida/hábito.             |
-| Semaforo     | texto       | `Verde`, `Amarillo` o `Rojo`.                       |
-| MinActividad | entero      | Minutos de actividad física.                        |
-| Puntos       | entero      | Monedas/puntos ganados.                             |
-| Glucosa      | entero/vacío| Valor opcional si aplica.                           |
+    frm = ttk.Frame(win, padding=20, style="TFrame")
+    frm.pack(fill="both", expand=True)
 
-> En el código:
-> `COLUMNAS = ("ID","Fecha","Comida","Semaforo","MinActividad","Puntos","Glucosa")`
+    ruta = Path(_file_).resolve().parents[2] / "data" / "form_data.csv"
+    if not ruta.exists():
+        messagebox.showwarning("Aviso", "No hay registros guardados aún.", parent=win)
+        return
 
-## 4) Reglas de negocio (MVP)
-- El usuario selecciona el color del **Semáforo** al registrar.
-- Sugerencia de puntos: **Verde = +5**, **Amarillo = +2**, **Rojo = +0**.
-- `MinActividad`, `Puntos` y `Glucosa` aceptan solo enteros (Glucosa puede ir vacío).
+    with open(ruta, "r", encoding="utf-8") as f:
+        reader = list(csv.DictReader(f))
 
-## 5) Integración con la app
-En `main.py`:
-```python
-from app.win_table import open_win_table
-# …
-ttk.Button(frame, text="Tabla / Hábitos", command=lambda: open_win_table(root)).pack(pady=6)
+    if not reader:
+        ttk.Label(frm, text="No hay datos para mostrar.").pack()
+        return
+
+    idx = tk.IntVar(value=0)
+    record_frame = ttk.Frame(frm, style="TFrame")
+    record_frame.pack(fill="both", expand=True)
+
+    def mostrar_registro():
+        for widget in record_frame.winfo_children():
+            widget.destroy()
+        r = reader[idx.get()]
+        ttk.Label(record_frame, text=f"Registro {idx.get()+1}/{len(reader)}", style="Header.TLabel").pack(pady=10)
+        for key, val in r.items():
+            row = ttk.Frame(record_frame, style="TFrame")
+            row.pack(fill="x", pady=2)
+            ttk.Label(row, text=f"{key}:", width=24, anchor="w").pack(side="left")
+            ttk.Label(row, text=val or "-", anchor="w").pack(side="left")
+
+    def siguiente():
+        if idx.get() < len(reader)-1:
+            idx.set(idx.get()+1)
+            mostrar_registro()
+
+    def anterior():
+        if idx.get() > 0:
+            idx.set(idx.get()-1)
+            mostrar_registro()
+
+    btn_frame = ttk.Frame(frm, style="TFrame")
+    btn_frame.pack(pady=10)
+    ttk.Button(btn_frame, text="Anterior", command=anterior, style="Nav.TButton").grid(row=0, column=0, padx=8)
+    ttk.Button(btn_frame, text="Siguiente", command=siguiente, style="Nav.TButton").grid(row=0, column=1, padx=8)
+    ttk.Button(btn_frame, text="Cerrar", command=win.destroy, style="Nav.TButton").grid(row=0, column=2, padx=8)
+
+    mostrar_registro()
 
