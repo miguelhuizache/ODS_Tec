@@ -1,15 +1,15 @@
 05_adaptacion_ventana_abel_muñoz.md
 
 Integrante: Abel Muñoz Arredondo
-Ventana asignada: Ventana 5 — Lista
+Ventana asignada: Ventana 5 — Tabla
 Proyecto: NutriTec (ficha/MVP en lista navegable con twinker)
 
 ¿Qué cambié?
-Convertí la ventana en un visor tipo “lista de ficha” que muestra toda la información de NutriTec en pares clave–valor (Nombre, Descripción, MVP, Métricas, etc.). Usa exactamente mi estilo ttk (clam, TFrame, TLabel, Header.TLabel, Nav.TButton) y navegación Anterior/Siguiente/Cerrar. 
+Convertí la ventana en un visor tipo “Tabla” que muestra toda la información de NutriTec en pares clave–valor (Nombre, Descripción, MVP, Métricas, etc.). Usa exactamente mi estilo ttk (clam, TFrame, TLabel, Header.TLabel, Nav.TButton) y navegación Anterior/Siguiente/Cerrar. 
 La fuente de datos por defecto es data/form_data.csv (sin hardcode) y, si no existe, muestra la ficha embebida de NutriTec para no bloquear la demo.
 
 Cómo se usa
-1) Ejecuta la app y entra a “5) Info (Lista)”.
+1) Ejecuta la app y entra a “5) Info (Tabla)”.
 2) Si ya existe data/form_data.csv, se listan sus campos. 
 3) Si no hay CSV, se despliega automáticamente la ficha completa de NutriTec (fallback embebido).
 4) Usa “Anterior”/“Siguiente” para cambiar de registro (si el CSV tiene varios).
@@ -96,4 +96,4 @@ def open_win_table(parent: tk.Tk):
 
 
 Mini reflexión: 
-Algo legible y la lista facil de entender para que el usuario encuentre mas didactica su estadia en la aplicación que realmente es algo facil de hacer, siento que el codigo inicial quedo de una mejor manera .
+Algo legible y la tabla facil de entender para que el usuario encuentre mas didactica su estadia en la aplicación que realmente es algo facil de hacer, siento que el codigo inicial quedo de una mejor manera .
